@@ -29,7 +29,7 @@ h1 {
     font-family: verdana;
     color: black;
     left: 10%;
-    top: 8px;
+    top: 98px;
     width: 30%;
     height: 90%;
     text-align: center;
@@ -52,5 +52,19 @@ h1 {
     position: absolute;
     top: 8px;
     right: 16px;
+    font-size: 18px;
+}
+
+.private {
+    position: absolute;
+    top: 58px;
+    right: 16px;
+    font-size: 18px;
+}
+
+.corporate {
+    position: absolute;
+    top: 58px;
+    right: 116px;
     font-size: 18px;
 }

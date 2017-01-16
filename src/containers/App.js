@@ -9,6 +9,9 @@ import ControlPanel from '../components/controlPanelComponent'
 import Folders from '../components/folderComponent'
 import Notices from '../components/noticeComponent'
 import Search from '../components/searchComponent'
+import Corporate from '../components/corporate'
+import OtherActivities from '../components/other-activities'
+import Private from '../components/private'
 import * as folderActions from '../actions/FolderActions'
 
 class App extends Component {
@@ -19,9 +22,13 @@ class App extends Component {
 
         return <div className="mainContainer">
                     <ControlPanel add={controlPanel.add} update={controlPanel.update} deleteItem={controlPanel.deleteItem}  />
-                    <Folders folderName={folders.folderName} subName={folders.subName} setFolder={setFolder}/>
+                    <Folders folderName={folders.folderName} subName={folders.subName} setFolder={setFolder}
+                    />
                     <Notices noticeTitle={notices.noticeTitle} noticeDetail={notices.noticeDetail}/>
                     <Search searchName={search.searchName} />
+                    <Corporate/>
+                    <OtherActivities/>
+                    <Private/>
                 </div>
             }
 }
