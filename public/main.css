@@ -79,3 +79,28 @@ h1 {
 .active {
     color: whitesmoke;
 }
+
+.corporateName {
+    position: absolute;
+    top: 100px;
+    right: 116px;
+    font-size: 18px;
+}
+
+.home {
+
+}
+
+.nav {
+    position: absolute;
+    border: 1px solid black;
+    background-color: lightskyblue;
+    font-family: verdana;
+    color: black;
+    left: 30%;
+    top: 98px;
+    width: 30%;
+    height: 90%;
+    text-align: center;
+    font-size: 18px;
+}

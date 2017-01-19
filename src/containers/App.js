@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
+import { IndexLink } from 'react-router'
 
 import ControlPanel from '../components/controlPanelComponent'
 import Folders from '../components/folderComponent'
@@ -15,6 +16,7 @@ import OtherActivities from '../components/other-activities'
 import Private from '../components/private-folder'
 import * as folderActions from '../actions/FolderActions'
 import NavLink from '../components/NavLink'
+import Home from '../components/home'
 
 class App extends Component {
     render() {
@@ -29,6 +31,7 @@ class App extends Component {
                     <Notices noticeTitle={notices.noticeTitle} noticeDetail={notices.noticeDetail}/>
                     <Search searchName={search.searchName} />
                     <ul role="nav">
+                        <li><IndexLink to="/" activeClassName="active">HomeEE</IndexLink></li>
                         <li><NavLink to="/corporate">Corporate</NavLink></li>
                         <li><NavLink to="/otherActivities">OtherActivities</NavLink></li>
                         <li><NavLink to="/private">Private</NavLink></li>
@@ -36,7 +39,7 @@ class App extends Component {
                     {/*<Corporate/>
                     <OtherActivities/>
                     <Private/>*/}
-                    {this.props.children}
+                    {this.props.children || <Home/>}
 
                 </div>
             }
